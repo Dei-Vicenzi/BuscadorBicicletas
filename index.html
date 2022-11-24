@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Buscador Bicicletas</title>
+    <!--Fuente-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/app.css">
+</head>
+
+<body class="imagen-bg">
+
+    <h1 class="titulo">
+        <ion-icon name="bicycle-outline"></ion-icon>Buscador de Bicicletas<ion-icon name="bicycle-outline"></ion-icon>
+    </h1>
+
+    <div class="contenedor">
+
+        <form id="buscador" class="form">
+            <div class="form__listado">
+                <div class="form__selector-box">
+                    <label for="marca">Marca</label>
+                    <select class="form__selector" id="marca">
+                        <option value="">Seleccione</option>
+                        <option value="Cannondale">Cannondale</option>
+                        <option value="Specialized">Specialized</option>
+                        <option value="Aurora">Aurora</option>
+                        <option value="Raleigh">Raleigh</option>
+                        <option value="Venzo">Venzo</option>
+                        <option value="Fire Bird">Fire Bird</option>
+                    </select>
+                </div>
+                <!--Marca-->
+
+                <div class="form__selector-box">
+                    <label for="year">Año</label>
+                    <select class="form__selector" id="year">
+                        <option value="">Seleccione</option>
+                    </select>
+                </div>
+                <!--Año-->
+
+                <div class="form__selector-box">
+                    <label for="tipo">Tipo</label>
+                    <select class="form__selector" id="tipo">
+                        <option value="">Seleccione</option>
+                        <option value="urbana">Urbana</option>
+                        <option value="montañera">Montañera</option>
+                        <option value="paseo">Paseo</option>
+                        <option value="ruta">Ruta</option>
+                        <option value="carrera">Carrera</option>
+                        <option value="plegable">Plegable</option>
+                    </select>
+                </div>
+                <!--Tipo-->
+
+                <div class="form__selector-box">
+                    <label for="rin">Rin</label>
+                    <select class="form__selector" id="rin">
+                        <option value="">Seleccione</option>
+                        <option value="20">20</option>
+                        <option value="21">21</option>
+                        <option value="22">22</option>
+                        <option value="23">23</option>
+                        <option value="24">24</option>
+                        <option value="25">25</option>
+                        <option value="26">26</option>
+                        <option value="27">27</option>
+                        <option value="28">28</option>
+                    </select>
+                </div>
+                <!--Rin-->
+
+                <div class="form__selector-box">
+                    <label for="color">Color</label>
+                    <select class="form__selector" id="color">
+                        <option value="">Seleccione</option>
+                        <option value="negra">Negra</option>
+                        <option value="gris">Gris</option>
+                        <option value="blanca">Blanca</option>
+                        <option value="rosa">Rosa</option>
+                    </select>
+                </div>
+
+                <div class="form__selector-box">
+                    <label for="frenos">Frenos</label>
+                    <select class="form__selector" id="frenos">
+                        <option value="">Seleccione</option>
+                        <option value="V-brakes">V-Brakes</option>
+                        <option value="Disco Mecánico">Disco Mecánico</option>
+                        <option value="Disco Hidraúlico">Disco Hidraúlico</option>
+                        <option value="Caliper">Caliper</option>
+                        <option value="ContraPedal">ContraPedal</option>
+                    </select>
+                </div>
+
+                <div class="form__selector-box">
+                    <label for="cuadro">Cuadro</label>
+                    <select class="form__selector" id="cuadro">
+                        <option value="">Seleccione</option>
+                        <option value="S">S</option>
+                        <option value="M">M</option>
+                        <option value="L">L</option>
+                        <option value="XL">XL</option>
+                    </select>
+                </div>
+
+
+
+                <div class="form__selector-box">
+                    <label for="minimo">Precio Min</label>
+                    <select class="form__selector" id="minimo">
+                        <option value="">Seleccione</option>
+                        <option value="900">900</option>
+                        <option value="1000">1000</option>
+                        <option value="2000">2000</option>
+                        <option value="3000">3000</option>
+                        <option value="4000">4000</option>
+                        <option value="5000">5000</option>
+                    </select>
+                </div>
+
+                <div class="form__selector-box">
+                    <label for="maximo">Precio Max</label>
+                    <select class="form__selector" id="maximo">
+                        <option value="">Seleccione</option>
+                        <option value="900">900</option>
+                        <option value="1000">1000</option>
+                        <option value="2000">2000</option>
+                        <option value="3000">3000</option>
+                        <option value="4000">4000</option>
+                        <option value="5000">5000</option>
+                    </select>
+                </div>
+            </div>
+            <!--Row principal-->
+        </form>
+
+        <div class="resultados__contenedor">
+            <h2 class="resultados__titulo">Resultados</h2>
+
+            <div class="resultados" id="resultado"></div>
+        </div>
+
+    </div>
+
+    <script src="js/modernizer.js"></script>
+
+    <script src="js/db.js"></script>
+    <script src="js/app.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>
